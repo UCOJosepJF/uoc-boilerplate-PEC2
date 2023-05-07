@@ -14,17 +14,18 @@
 <body>
     <nav class="navbar navbar-expand-xxl navbar-dark bg-dark" aria-label="Seventh navbar example">
         <div class="container">
-            <img src="assets/images/chess-logo.png" alt="logo enorque club" width="30" height="auto">
+            <img src="assets/images/chess-logo.png" alt="logo enroque club" width="30" height="auto">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl"
                 aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarsExampleXxl">
                 <ul class="navbar-nav me-auto mb-2 mb-xl-0">
                 </ul>
                 <ul class="navbar-nav mb-2 mb-xl-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pagetwo.html">Club</a>
@@ -33,21 +34,43 @@
                         <a class="nav-link" href="pagethree.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pagefour.html">Galeria</a>
+                        <a class="nav-link active" aria-current="page" href="pagefour.html">Galeria</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <main>
-            <h1>Enroque Club</h1>
-            <p class="about"> ¡Bienvenido a Enroque Club! Aquí, los amantes del ajedrez pueden encontrar un lugar para
-                aprender, mejorar y disfrutar de la emoción de este juego clásico. Únete a nuestra comunidad y disfruta
-                de partidas amistosas, torneos y eventos especiales.</p>
-            <img src="assets/images/chessbg.png" alt="Jugadores de ajedrez">
-        </main>
+    <div class="container">
+        <h2 class="miembros-titulo">Galeria de fotos</h2>
+        <p class="miembros-descripcion">Revive los momentos mas emocionantes que han vivido los miembros del club de
+            Enroque y animate a unirte a nosotros para vivir experiencias similares.</p>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/galeria1.png" class="d-block w-100" alt="Jugadores jugando un torneo de ajedrez">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/galeria2.png" class="d-block w-100" alt="Jugadores jugando un torneo de ajedrez">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/galeria3.png" class="d-block w-100" alt="Jugadores jugando un torneo de ajedrez">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="unete-al-club pt-4">
+            <p>Si tienes alguna foto de algunos de nuestros miembros durante sus participaciones en los diferentes
+                campeonates, te agradeceriamos nos la hicieras llegar a través del siguiente fornmulario:</p>
+            <button class="btn btn-primary text-white">Enviar foto</button>
+        </div>
     </div>
 
     <div class="container-fluid bg-dark">
@@ -60,15 +83,16 @@
                 <div class="footer-container d-flex flex-wrap justify-content-between align-items-center py-3">
 
                     <a href="/" class="col-md-4 link-dark text-decoration-none">
-                        <img class="logo-footer" src="assets/images/chess-logo.png" alt="Logo Enroque Club" width="30" height="auto">
+                        <img class="logo-footer" src="assets/images/chess-logo.png" alt="logo enroque club" width="30" height="auto">
                     </a>
 
                     <ul
                         class="center-footer nav col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto ">
-                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-white">Inicio</a></li>
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
                         <li class="nav-item"><a href="pagetwo.html" class="nav-link px-2 text-muted">Club</a></li>
-                        <li class="nav-item"><a href="pagethree.html" class="nav-link px-2 text-muted">Blog</a></li>
-                        <li class="nav-item"><a href="pagefour.html" class="nav-link px-2 text-muted">Galeria</a></li>
+                        <li class="nav-item"><a href="pagethree.html" class="nav-link px-2 text-muted">Blog</a>
+                        </li>
+                        <li class="nav-item"><a href="pagefour.html" class="nav-link px-2 text-white">Galeria</a></li>
                     </ul>
 
                     <ul class="center-footer rrss nav col-md-4 justify-content-end">

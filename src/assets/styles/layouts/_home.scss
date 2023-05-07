@@ -1,57 +1,171 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  font-family: "Avenir Book", "Franklin Gothic Medium", Helvetica, Arial, sans-serif;
+  color: #282828;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+//HEADER AND FOOTER
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+@media screen and (max-width: 770px) {
+  .footer-container {
+    display: block !important;
+    justify-content: center;
+    text-align: center;
+  }
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+  .rrss {
+    justify-content: center !important;
+  }
+
+  .center-footer {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .logo-footer {
+    margin-bottom: 1rem !important;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
+//INICIO
+
+main {
+  position: relative;
+  max-width: 45em;
+  padding: 1em;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: .25em;
+    font-family: "Galatia SIL", Georgia, serif;
+    font-size: calc(3em + 7vw);
+    color: #2e2e2e;
+  }
+
+  .about {
+    margin-bottom: 1em;
+    font-size: calc(1em + .3vw);
+    line-height: 1.3;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@supports (display:grid) {
+  @media (min-width: 42em) and (min-height: 27em) {
+    main {
+      display: grid;
+      grid-template-rows: 20vh 15vh 40vh 15vh;
+      grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + .5vw);
+      max-width: none;
+      padding: 0;
+
+      h1 {
+        z-index: 2;
+        grid-row: 2 / 2;
+        grid-column: 3 / 6;
+        align-self: center;
+        padding-left: .25em;
+        margin-bottom: initial;
+      }
+
+      .about {
+        grid-row: 3;
+        grid-column: 5 / 6;
+        align-self: center;
+        padding-bottom: 4vh;
+        margin-bottom: initial;
+      }
+
+      img {
+        grid-row: 1 / 5;
+        grid-column: 1 / 4;
+      }
+    }
+  }
+}
+
+//CLUB PAGE
+
+.miembros-titulo {
+  padding-top: 40px;
+  font-size: 32px;
   font-weight: 700;
-  color: $uoc-corporate;
+}
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+.miembros-descripcion {
+  margin-bottom: 40px;
+  font-size: 22px;
+  color: #444;
+}
+
+.members-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member {
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 5px;
+
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: #666;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+//BLOG PAGE
+
+.unete-al-club h3 {
+  padding-top: 40px;
+  margin-top: 40px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.unete-al-club p {
+  margin-bottom: 40px;
+  font-size: 22px;
+  color: #444;
+}
+
+.unete-al-club button {
+  padding: 20px;
+  margin-bottom: 80px;
+  font-size: 22px;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.blog {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+blockquote {
+  font-size: 30px;
+  font-style: italic;
+  color: #666;
   text-align: center;
 }
