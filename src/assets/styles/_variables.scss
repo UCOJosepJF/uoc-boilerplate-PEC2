@@ -1,8 +1,13 @@
 @use "sass:color";
 
+@function darken-color($color, $amount) {
+  @return darken($color, $amount);
+}
+
 $font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
+$body-background: darken-color(#fff, 1);
 $primary: #242424;
 $white: #fff;
 
